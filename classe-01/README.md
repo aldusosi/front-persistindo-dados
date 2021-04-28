@@ -1,17 +1,22 @@
 ![](https://i.imgur.com/xG74tOh.png)
 
-## Exercício de classe 🏫
+# Exercício de classe 🏫
 
-### Lista de tarefas
+## Crônometro
 
-Seu desafio é desenvolver o aplicativo de tarefas encontrado no arquivo 'todo-app'.fig, o foco aqui é a funcionalidade, deixe o design para o fim.
+Seu desafio é desenvolver um crônometro, o foco aqui é a funcionalidade, design não é obrigatório (mas é bem vindo se possível).
 
 Funcionalidades:
-- Adicionar novas tarefas à lista
-- Marcar todas como completas
-- Excluir todas as tarefas
-- Filtrar por todas / ativas / completas
-- Limpar todas as tarefas completas
+- Começar crônometro (começa a contagem)
+- Pausar crônometro (pausa a contagem)
+- Finalizar crônometro (volta a contagem a 0 e para ela)
+- Reiniciar crônometro (volta a contagem a 0)
+- Trocar tema (claro e escuro)
+
+Lembre-se de:
+- Criar intervalos corretamente
+- Limpar efeitos
+- Criar estados e referências corretamente
 
 --- 
 
