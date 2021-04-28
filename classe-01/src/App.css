@@ -1,0 +1,56 @@
+.claro {
+  background-color: aliceblue;
+  color: #222222;
+}
+
+.escuro {
+  background-color: #222222;
+  color: aliceblue;
+}
+
+.claro,
+.escuro {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  place-items: center;
+  gap: 1em;
+}
+
+p {
+  font-size: 30px;
+}
+
+.button-escuro {
+  all: unset;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  border: 2px solid aliceblue;
+  background-color: #222222;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.button-claro {
+  all: unset;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  border: 2px solid #222222;
+  background-color: aliceblue;
+  color: #222222;
+  cursor: pointer;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  gap: 1em;
+  place-items: center;
+  place-content: center;
+}
+
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
