@@ -1,6 +1,6 @@
 ![](https://i.imgur.com/xG74tOh.png)
 
-# Estado e eventos no React
+# Persistindo dados
 
 ## Exercícios de classe 🏫
 
