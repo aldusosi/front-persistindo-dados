@@ -1,10 +1,16 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 function App() {
   const [cronometro, setCronometro] = useState(0);
   const [tema, setTema] = useState(localStorage.getItem("tema") ?? "claro");
   const intervalID = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      clearInterval(intervalID.current);
+    };
+  }, []);
 
   function iniciarCronometro() {
     if (intervalID.current) return;
