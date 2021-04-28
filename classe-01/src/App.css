@@ -1,0 +1,33 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timer {
+    font-size: 200px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vh;
+}
+
+button {
+    all: unset;
+    background-color: #4a314d;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ace894;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #ace894;
+    color: #4a314d;
+}
