@@ -1,0 +1,38 @@
+
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    font-size:50px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 120px 50px 50px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "watch watch "
+      "start pause "
+      "finish restart";
+  }
+
+
+
+  .watch {
+      grid-area: watch; }
+  .start { 
+      grid-area: start; }
+  .pause { 
+      grid-area: pause; }
+  .finish { 
+      grid-area: finish; }
+  .restart { 
+      grid-area: restart; }
+  
