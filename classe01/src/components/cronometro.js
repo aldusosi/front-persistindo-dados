@@ -1,13 +1,16 @@
 import { React, useState, useEffect, useRef } from 'react'
 
 const Stopwatch = () => {
-    const [cronometro, setCronometro] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+    const [minutes, setMinutes] = useState(0);
     const intervalId = useRef(null);
     const pause = useRef(true)
+    const dark = useRef(true)
+
 
     function startCronometro() {
         if (pause.current === true) {
-            intervalId.current = setInterval(() => setCronometro(prevCronometro => prevCronometro + 1), 1000)
+            intervalId.current = setInterval(() => setSeconds(prevCronometro => prevCronometro + 1), 1000)
             pause.current = false;
         }
     };
@@ -18,7 +21,8 @@ const Stopwatch = () => {
     };
 
     function finishCronometro() {
-        setCronometro(0)
+        setMinutes(0)
+        setSeconds(0)
         pauseCronometro()
     }
 
@@ -27,21 +31,28 @@ const Stopwatch = () => {
         startCronometro()
     }
 
+
     useEffect(() => {
         return () => {
             clearInterval(intervalId.current);
         };
     }, []);
 
+    useEffect(() =>{
+        if (seconds === 60){
+        setMinutes(minutes +1)
+        setSeconds(0)}
+    })
+
 
     return (
 
-        <div className="grid-container">
-            <div className="watch"><p>{String(cronometro).padStart(4, '0')}</p></div>
-            <button onClick={startCronometro}><div className="start">Começar</div></button>
-            <button onClick={pauseCronometro}> <div className="pause">Pausar </div></button>
-            <button onClick={finishCronometro}> <div className="finish">Finalizar </div></button>
-            <button onClick={rerunCronometro}><div className="restart">Reiniciar </div></button>
+        <div className={"grid-container"}>
+            <div className="watch"><p className="p-light">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p></div>
+            <button onClick={startCronometro} className={"start", "button-light"}><div>Começar</div></button>
+            <button onClick={pauseCronometro} className={"pause", "button-light"}> <div>Pausar </div></button>
+            <button onClick={finishCronometro} className={"finish", "button-light"}> <div>Finalizar </div></button>
+            <button onClick={rerunCronometro} className={"restart", "button-light"}><div>Reiniciar </div></button>
         </div>
 
     )
