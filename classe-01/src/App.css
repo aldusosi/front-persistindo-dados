@@ -1,0 +1,35 @@
+.claro {
+    background-color: white;
+    color: black;
+}
+
+.claro button {
+    background-color: rgb(68, 141, 250);
+    color: black;
+    border: transparent;
+}
+
+.escuro {
+    background-color: black;
+    color: white;
+}
+
+.escuro button {
+    background-color: rgb(140, 0, 255);
+    color: rgb(255, 255, 255);
+    border: transparent;
+}
+
+button {
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.cronometroButtons {
+    display: flex;
+    gap: 5px;
+    
+}
