@@ -4,7 +4,7 @@
 
 ## Exercícios de classe 🏫
 
-1. Crônometro
+1. Cronômetro
 
 Preencha a checklist para finalizar o exercício:
 -   [ ] Executar `git clone https://github.com/cubos-academy/front-persistindo-dados.git` no terminal para clonar o repositório, ou clonar de outra maneira
