@@ -2,7 +2,7 @@
 
 # Exercício de classe 🏫
 
-## Crônometro
+## Cronômetro
 
 Seu desafio é desenvolver um crônometro, o foco aqui é a funcionalidade, design não é obrigatório (mas é bem vindo se possível).
 
