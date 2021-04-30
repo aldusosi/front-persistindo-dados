@@ -1,0 +1,41 @@
+#App {
+    min-width: 100vh;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'FRoboto';
+}
+h1 {
+    display: grid;
+    place-content: center;
+}
+span{ 
+    display: grid;
+    place-content: center;
+    margin-bottom: 24px;
+    font-size: 48px;
+    color: palevioletred;
+}
+
+button {
+    font-family: 'Roboto';
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    cursor: pointer;
+    margin: 12px 12px;
+    font-size: 18px;
+    padding: 12px;
+
+
+}
+
+
+.claro {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.escuro{
+    background-color: #000000;
+    color: #FFFFFF;
+}
