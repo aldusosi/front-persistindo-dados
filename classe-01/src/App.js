@@ -5,6 +5,7 @@ function App() {
 
   const [segundos, setSegundos] = useState(0);
   const [minutos, setMinutos] = useState(0);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
   const intervalSegundosId = useRef(null);
   let pausado = false;
 
@@ -13,6 +14,19 @@ function App() {
       clearInterval(intervalSegundosId.current);
     }
   }, []);
+
+  function changeTheme() {
+    let newTheme = "";
+    if (theme === "dark") {
+      newTheme = "light";
+    } else {
+      newTheme = "dark";
+    }
+
+    setTheme(newTheme);
+
+    localStorage.setItem("theme", newTheme);
+  }
 
 
   function iniciar() {
@@ -45,17 +59,20 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={theme === "light" ? "App App_light" : "App App_dark"}>
+      <div className="choose_theme">
+        <button className={theme === "light" ? "btn_light" : "btn_dark"} onClick={changeTheme}>Trocar tema</button>
+      </div>
 
       <div className="timer">
         {tempo()}
       </div>
 
       <div className="buttons">
-        <button onClick={iniciar}>Iniciar</button>
-        <button onClick={pausar}>Pausar</button>
-        <button onClick={continuar}>Continuar</button>
-        <button onClick={zerar}>Zerar</button>
+        <button className={theme === "light" ? "btn_light" : "btn_dark"} onClick={iniciar}>Iniciar</button>
+        <button className={theme === "light" ? "btn_light" : "btn_dark"} onClick={pausar}>Pausar</button>
+        <button className={theme === "light" ? "btn_light" : "btn_dark"} onClick={continuar}>Continuar</button>
+        <button className={theme === "light" ? "btn_light" : "btn_dark"} onClick={zerar}>Zerar</button>
       </div>
 
     </div>

@@ -3,6 +3,18 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    min-height: 100vh;
+}
+
+.App_light {
+    background-color: #52b788;
+    color: #1a090d;
+}
+
+.App_dark {
+    background-color: #1a090d;
+    color: #52b788;
 }
 
 .timer {
@@ -18,16 +30,28 @@
 
 button {
     all: unset;
-    background-color: #4a314d;
-    color: black;
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
-    color: #ace894;
     text-align: center;
 }
 
-button:hover {
+.btn_light {
+    background-color: #ace894;
+    color: #4a314d;
+}
+
+.btn_light:hover {
+    background-color: #4a314d;
+    color: #ace894;
+}
+
+.btn_dark {
+    background-color: #4a314d;
+    color: #ace894;
+}
+
+.btn_dark:hover {
     background-color: #ace894;
     color: #4a314d;
 }

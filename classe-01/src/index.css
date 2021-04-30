@@ -8,12 +8,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    background-color: #1a090d;
-    color: #52b788;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
