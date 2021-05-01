@@ -35,13 +35,13 @@ function App() {
   return (
     <div className={tema} id="App">
       <button onClick={() => setTema( tema === 'claro' ? 'escuro' : 'claro')}>Trocar tema</button>
-      <h1>Crônometro</h1>
+      <h1>Cronômetro</h1>
       <span>{cronometro} segundos</span>
       <div>
-        <button onClick={handleComecar}>Começar cronômetro</button>
-        <button onClick={handlePausar}>Pausar cronômetro</button>
-        <button onClick={handleFinalizar}>Finalizar cronômetro</button>
-        <button onClick={handleReiniciar}>Reiniciar cronômetro</button>
+        <button className="btn-comecar" onClick={handleComecar}>Começar cronômetro</button>
+        <button className="btn-pausar" onClick={handlePausar}>Pausar cronômetro</button>
+        <button className="btn-finalizar" onClick={handleFinalizar}>Finalizar cronômetro</button>
+        <button className="btn-reiniciar" onClick={handleReiniciar}>Reiniciar cronômetro</button>
         
       </div>
     </div>
